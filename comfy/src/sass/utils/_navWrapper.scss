@@ -1,0 +1,143 @@
+.nav-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  background-color: $color-white;
+  height: 8rem;
+
+  //flex
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include respond(TAB) {
+    justify-content: space-between;
+    padding: 2rem;
+  }
+}
+
+.error {
+  text-align: center;
+  color: $color-red;
+  text-transform: capitalize;
+  font-size: $text-xxl;
+  margin-top: 20rem;
+}
+
+.loader {
+  width: 100%;
+  margin: 0rem auto;
+  height: 100vh;
+  background-color: $color-gray-dull;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+
+  &_spinner {
+    display: inline;
+    font-size: $text-xxl;
+    color: $color-red;
+    text-align: center;
+  }
+}
+
+.stars {
+  display: flex;
+  gap: 2rem;
+
+  &_reviews {
+    &_title {
+      font-size: $text-lg;
+      color: $color-red;
+    }
+  }
+}
+
+.addtoCart {
+  &_colors {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+
+    &_span {
+      font-size: $text-lg;
+      text-transform: capitalize;
+      color: $color-pink;
+    }
+  }
+}
+
+.colors_btn {
+  font-size: $text-lg;
+  width: 2.1rem;
+  height: 2.1rem;
+
+  display: inline-block;
+  background-color: #222222;
+  border-radius: 100%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.colors_active {
+  opacity: 1;
+}
+
+.colors_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // gap: 1rem;
+}
+
+.btn_wrapper {
+  display: flex;
+
+  margin-top: 1rem;
+  &_btns {
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    gap: 1rem;
+
+    &_btn {
+      border: none;
+      color: $color-pink;
+      font-size: $text-lg;
+      cursor: pointer;
+      background: none;
+      outline: 1px solid $color-pink;
+      width: 4rem;
+      height: 3rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+    &_text {
+      font-size: $text-xl;
+      color: #222222;
+    }
+  }
+}
+
+.add_link {
+  background-color: $color-pink;
+  color: #ffff;
+  text-decoration: none;
+  padding: $p-t;
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: black;
+  }
+}

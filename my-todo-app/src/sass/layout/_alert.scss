@@ -1,0 +1,90 @@
+.alert_success {
+  font-size: 1rem;
+  text-align: center;
+  color: green;
+  background-color: rgb(165, 212, 165);
+  padding: 2rem;
+
+  height: 100%;
+  width: 100%;
+}
+
+.alert_danger {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(192, 120, 120);
+  padding: 2rem;
+  width: 100%;
+
+  height: 100%;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h1,
+h3 {
+  color: #f414b882;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+h3 {
+  color: black;
+}
+
+.total {
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header_link {
+  &,
+  &:link,
+  &:visited {
+    background-color: #1099ad;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    // height: 4rem;
+    font-size: 2rem;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      background-color: rgb(132, 38, 183);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.clear {
+  text-align: center;
+  border: none;
+  background-color: #1099ad;
+  padding: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+
+  &:hover {
+    background-color: #ad24a9;
+  }
+}

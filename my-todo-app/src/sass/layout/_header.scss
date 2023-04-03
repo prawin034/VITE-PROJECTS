@@ -1,0 +1,42 @@
+.header {
+  width: 70%;
+  background-color: black;
+  margin: 5rem auto;
+  height: 100%;
+  padding: 2rem;
+  &_box {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+
+    &_1 {
+      flex: 1;
+      // height: 6rem;
+      background-color: #ffffff;
+      color: #114e57;
+      display: flex;
+      // flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      justify-content: space-between;
+      &_h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      &_h3 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+    &_2 {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

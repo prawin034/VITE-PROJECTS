@@ -1,0 +1,55 @@
+.about {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+
+  @include respond(TAB) {
+    flex-direction: column;
+  }
+
+  &_imgbox {
+    &_img {
+      width: 50rem;
+      // height: 30%;
+      height: 50rem;
+      @include respond(TAB) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_content {
+    &_title {
+      font-size: $text-xxxl;
+      color: $color-cyan-dark;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    }
+    &_p {
+      font-size: $text-xl;
+      line-height: 1.8;
+      color: $color-grape;
+    }
+  }
+}
+
+.about_hero {
+  margin: 0 auto;
+  width: 100%;
+  height: 16rem;
+  background-color: $color-gray-dull2;
+
+  &_h {
+    padding: 5rem;
+    color: $color-cyan-dark;
+    font-size: $text-xxxl;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+}

@@ -1,0 +1,25 @@
+.products_page {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  // background-color: $color-gray;
+
+  &_center {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    align-items: stretch;
+    padding: 1rem;
+    // justify-items: center;
+
+    &_grid1 {
+      background-color: $color-red;
+    }
+    &_grid2 {
+      background-color: $color-pink;
+    }
+  }
+}

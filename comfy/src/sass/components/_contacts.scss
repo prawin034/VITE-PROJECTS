@@ -1,0 +1,60 @@
+.contacts {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    &_title {
+      font-size: $text-xxxl;
+      color: $color-black;
+      text-transform: capitalize;
+    }
+    &_para {
+      font-size: $text-xl;
+      color: $color-black;
+      text-transform: capitalize;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &_form {
+    margin: 0 auto;
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+    &_input {
+      // text-align: center;
+      display: block;
+      width: 100%;
+      font-size: $text-xxxl;
+      height: 6.5rem;
+      border: none;
+      background-color: $color-gray;
+      color: $color-cyan-dark;
+      padding: 1rem;
+    }
+
+    &_button {
+      font-size: $text-xl;
+      color: $color-white;
+      background-color: $color-red;
+      border: none;
+      padding: $p-t $p-t;
+      transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-color: $color-cyan-dark;
+        cursor: pointer;
+      }
+    }
+  }
+}

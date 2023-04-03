@@ -1,0 +1,77 @@
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+  &_content {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &_title {
+      font-size: $text-xxxl;
+      color: $color-black;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    &_para {
+      font-size: $text-xl;
+      color: $color-grape;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-style: normal;
+    }
+    &_btn {
+      &,
+      &:link,
+      &:visited {
+        font-size: $text-lg;
+        color: $color-white;
+        text-decoration: none;
+        background-color: $color-pink-light;
+        padding: $p-t $p-t-2;
+        width: fit-content;
+      }
+    }
+  }
+  &_imgbox {
+    position: relative;
+    &_img {
+      position: relative;
+      width: 40rem;
+      height: 50rem;
+      z-index: 200;
+      border-radius: 1.1rem;
+    }
+    &_img2 {
+      position: absolute;
+      bottom: 0;
+      left: -10rem;
+      width: 25rem;
+      border-radius: 1rem;
+      z-index: 200;
+      // height: 20rem;
+    }
+    &_img3 {
+      position: absolute;
+
+      top: 6rem;
+      left: -5rem;
+      width: 100%;
+      background-color: $color-gray-dull;
+      height: 80%;
+      border-radius: 1.1rem;
+      overflow: hidden;
+    }
+  }
+}

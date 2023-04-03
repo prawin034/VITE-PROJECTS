@@ -1,0 +1,131 @@
+.navbar_logo {
+  z-index: 200;
+  &_img {
+    width: 20rem;
+    object-fit: cover;
+  }
+}
+
+.navbar_toggle {
+  z-index: 200;
+  display: none;
+  border: none;
+  background: none;
+  font-size: $text-xxxl;
+  font-weight: bold;
+  cursor: pointer;
+  &_bar {
+    color: $color-red;
+  }
+
+  @include respond(TAB) {
+    display: block;
+  }
+}
+
+.navbar_list {
+  ////
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  ///display only when screen size is greater than 800
+
+  @include respond(TAB) {
+    display: flex;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-cyan;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    transform: translateX(-100%);
+
+    // padding: 2rem;
+  }
+
+  &_link {
+    list-style: none;
+    @include respond(TAB) {
+      width: 100%;
+      // height: 7rem;
+      // padding: 2rem;
+    }
+
+    &_a {
+      font-size: $text-lg;
+      color: $color-cyan-dark;
+      font-weight: bold;
+      text-transform: capitalize;
+      text-decoration: none;
+      display: block;
+      transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      @include respond(TAB) {
+        font-size: $text-xxl;
+        padding: 1.5rem;
+      }
+
+      &:hover {
+        border-bottom: 1px solid $color-cyan-dark;
+
+        @include respond(TAB) {
+          background-color: $color-gray-dull2;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.cart_flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  ///display only when screen size is greater than 800
+  @include respond(TAB) {
+    display: flex;
+    transform: translateX(-100%);
+    position: fixed;
+    bottom: 10rem;
+    width: 100%;
+    // height: 100%;
+    justify-content: center;
+    align-items: end;
+  }
+}
+.cart {
+  &_btn {
+    font-size: $text-xl;
+    color: $color-cyan-dark;
+    text-transform: capitalize;
+    border: none;
+    background: none;
+    align-self: stretch;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+
+    span {
+      font-size: $text-xxl;
+      display: block;
+    }
+  }
+}
+
+.active {
+  display: flex;
+  transform: translateX(0);
+  transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
