@@ -120,6 +120,22 @@
     span {
       font-size: $text-xxl;
       display: block;
+      position: relative;
+    }
+
+    &_badge {
+      color: $color-red;
+      text-decoration: none;
+      background-color: $color-cyan-dark;
+      // padding: 0.3rem 0.3rem;
+      width: 3rem;
+      text-align: center;
+      font-size: $text-sm;
+      border-radius: 100%;
+      display: inline-block;
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
     }
   }
 }

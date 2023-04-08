@@ -6,9 +6,11 @@ import { ImCart } from 'react-icons/im';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { MdPeopleAlt } from 'react-icons/md';
 import { useProductsContext } from '../context/ProductsContext';
+import { useCartGlobalContext } from '../context/CartContext';
 import { SIDEBAR_CLOSE } from '../utils/Actions';
 const Navbar = () => {
   const { SideBarOpen, SideBarClose, modalOpen } = useProductsContext();
+  const { total_items } = useCartGlobalContext();
 
   return (
     <NavWrapper>
@@ -78,6 +80,7 @@ const Navbar = () => {
             <span>
               <ImCart color="#222222" />
             </span>
+            <span className="cart_btn_badge">{total_items}</span>
           </Link>
         </div>
         {/* LOGIN */}

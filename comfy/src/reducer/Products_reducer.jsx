@@ -9,7 +9,7 @@ import {
   GET_SINGLE_PRODUCT_SUCCESS,
 } from '../utils/Actions';
 
-const Products_reducer = (action, state) => {
+const Products_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
     return { ...state, modalOpen: true };
   }

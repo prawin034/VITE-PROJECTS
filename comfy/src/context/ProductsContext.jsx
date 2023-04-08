@@ -80,7 +80,6 @@ export const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     FetchProducts(url);
-    // SingleProduct();
   }, []);
 
   return (

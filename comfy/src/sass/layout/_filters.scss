@@ -1,0 +1,104 @@
+.content {
+  margin: 10rem auto;
+  width: 100%;
+  height: 100%;
+
+  &_form {
+    &_inputbox {
+      &_input {
+        width: 100%;
+        font-size: 2rem;
+        height: 5rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        color: black;
+
+        &:placeholder-shown {
+          font-size: 2rem;
+          padding: 2rem;
+        }
+      }
+    }
+
+    &_category {
+      &_title {
+        font-size: $text-xl;
+        color: $color-red;
+        margin-bottom: 1rem;
+      }
+      &_btns {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        &_btn {
+          border: none;
+          background: none;
+          color: $color-pink;
+          font-weight: bold;
+          font-size: $text-lg;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_companies {
+      margin-bottom: 2rem;
+      &_select {
+        width: 50%;
+        height: 4rem;
+        background-color: $color-pink;
+        color: $color-white;
+        font-size: $text-lg;
+        padding: 1rem;
+      }
+    }
+
+    &_colors {
+      &_box {
+        margin-bottom: 2rem !important;
+        display: flex;
+        gap: 1rem;
+        &_color {
+          width: 1.8rem;
+          height: 2rem;
+          border-radius: 100%;
+          border: none;
+          background-color: black;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &_clear {
+    margin-top: 3rem;
+    &_btn {
+      border: none;
+      background: red;
+      padding: 1rem;
+      font-size: $text-lg;
+      color: $color-white;
+    }
+  }
+}
+
+.actives {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.active-color {
+  color: #fff;
+}
+
+.all {
+  border: none;
+  background: none;
+  opacity: 0.5;
+}
+
+.all_active {
+  border-bottom: 2px solid black;
+}

@@ -15,11 +15,56 @@
     padding: 1rem;
     // justify-items: center;
 
-    &_grid1 {
-      background-color: $color-red;
+    // &_grid1 {
+    // }
+    // &_grid2 {
+    // }
+  }
+}
+
+.sort {
+  display: flex;
+  justify-content: space-evenly;
+  &_btns {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &_btn {
+      background-color: #fff !important;
+      color: black;
+      font-size: 3rem;
+      padding: 1rem;
+      border-radius: 1.1rem;
+      opacity: 0.5;
+      cursor: pointer;
     }
-    &_grid2 {
-      background-color: $color-pink;
-    }
+  }
+}
+
+.sortactive {
+  border: 2px solid black !important;
+  background-color: rgb(41, 33, 90) !important;
+}
+
+.hr {
+  color: black;
+}
+
+.sort_form {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  &_label {
+    font-size: $text-lg;
+    color: $color-red;
+    font-weight: bold;
+  }
+  &_select {
+    width: 20rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: $text-lg;
   }
 }
