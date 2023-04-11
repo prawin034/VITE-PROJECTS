@@ -30,6 +30,13 @@ const router = createBrowserRouter([
       {
         path: '/checkout',
         element: <Checkout />,
+        loader: async () => {
+          const token = localStorage.getItem('id_token');
+          if (!token) {
+            return redirect('/');
+          }
+          return redirect('/checkout');
+        },
       },
 
       { path: '*', element: <ErrorPage /> },
@@ -38,6 +45,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const token = localStorage.getItem('id_token');
+  console.log(token);
   return <RouterProvider router={router} />;
 }
 
