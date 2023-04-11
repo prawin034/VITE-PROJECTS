@@ -8,9 +8,13 @@ import { MdPeopleAlt } from 'react-icons/md';
 import { useProductsContext } from '../context/ProductsContext';
 import { useCartGlobalContext } from '../context/CartContext';
 import { SIDEBAR_CLOSE } from '../utils/Actions';
+import { useUserGlobalContext } from '../context/UserContext';
+import { User } from '@auth0/auth0-react';
 const Navbar = () => {
   const { SideBarOpen, SideBarClose, modalOpen } = useProductsContext();
   const { total_items } = useCartGlobalContext();
+
+  const { loginWithRedirect, logout, myUser } = useUserGlobalContext();
 
   return (
     <NavWrapper>
@@ -60,15 +64,17 @@ const Navbar = () => {
           </Link>
         </li>
         {/*CHECKOUT */}
-        <li className="navbar_list_link">
-          <Link
-            onClick={SideBarClose}
-            to="/checkout"
-            className="navbar_list_link_a"
-          >
-            CHECKOUT
-          </Link>
-        </li>
+        {myUser && (
+          <li className="navbar_list_link">
+            <Link
+              onClick={SideBarClose}
+              to="/checkout"
+              className="navbar_list_link_a"
+            >
+              CHECKOUT
+            </Link>
+          </li>
+        )}
       </ul>
 
       {/*CART  */}
@@ -85,12 +91,26 @@ const Navbar = () => {
         </div>
         {/* LOGIN */}
         <div className="cart">
-          <button className="cart_btn">
-            Login
-            <span>
-              <MdPeopleAlt color="#222222" />
-            </span>
-          </button>
+          {myUser ? (
+            <button
+              className="cart_btn"
+              onClick={() =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
+            >
+              Logout
+              <span>
+                <MdPeopleAlt color="#222222" />
+              </span>
+            </button>
+          ) : (
+            <button className="cart_btn" onClick={loginWithRedirect}>
+              Login
+              <span>
+                <MdPeopleAlt color="#222222" />
+              </span>
+            </button>
+          )}
         </div>
       </div>
     </NavWrapper>

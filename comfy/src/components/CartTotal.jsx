@@ -2,8 +2,10 @@ import React from 'react';
 import { useCartGlobalContext } from '../context/CartContext';
 import FormatPrice from '../utils/FormatPrice';
 import { Link } from 'react-router-dom';
+import { useUserGlobalContext } from '../context/UserContext';
 const CartTotal = () => {
   const { total_amount, shipping_fee } = useCartGlobalContext();
+  const { myUser, loginWithRedirect } = useUserGlobalContext();
   return (
     <div className="cart_totals">
       <div className="cart_totals_center">
@@ -26,13 +28,20 @@ const CartTotal = () => {
             {FormatPrice(total_amount + shipping_fee)}
           </p>
         </div>
-        <Link
-          className="cart_btns_btn"
-          style={{ textAlign: 'center' }}
-          to="/checkout"
-        >
-          PROCCED TO CHECKOUT
-        </Link>
+
+        {myUser ? (
+          <Link
+            className="cart_btns_btn"
+            style={{ textAlign: 'center' }}
+            to="/checkout"
+          >
+            PROCCED TO CHECKOUT
+          </Link>
+        ) : (
+          <button onClick={loginWithRedirect} className="cart_btns_btn">
+            LOGIN
+          </button>
+        )}
       </div>
     </div>
   );

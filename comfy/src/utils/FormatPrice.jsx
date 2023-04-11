@@ -1,3 +1,5 @@
+import { redirect } from 'react-router-dom';
+import { useUserGlobalContext } from '../context/UserContext';
 const FormatPrice = (number) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -15,4 +17,13 @@ export const getUniqueValues = (data, type) => {
   }
 
   return ['all', ...new Set(unique)];
+};
+
+export const checkAuthLogin = () => {
+  const token = localStorage.getItem(
+    '@@auth0spajs@@::bmqJfyn7qnLXBbaTzbX1oq2j3S0eNwJy::@@user@@'
+  );
+  if (!token) {
+    return redirect('/auth');
+  }
 };
